@@ -1,0 +1,33 @@
+
+body{
+    display: block;
+    font-size: large;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+h1{
+    text-align: center;
+}
+td{
+    font-size: larger;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+p{
+    margin: 5px;
+}
+table{
+    background-color: bisque;
+    border: 2px solid black;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+}
+th{
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
