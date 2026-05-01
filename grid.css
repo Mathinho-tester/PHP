@@ -1,0 +1,76 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  color: rgb(0, 0, 0);
+}
+
+#container, #container2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*grid-template-rows: repeat(3, 1fr);*/
+  grid-template-areas:
+    "header header header header"
+    "form form form form"
+    "footer footer footer footer";
+  gap: 1px;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+form{
+  grid-area: form;
+}
+
+header,
+footer,
+form,
+table {
+  background-color: rgb(255, 255, 255);
+}
+
+header,
+footer {
+  height: 20vh;
+  text-align: center;
+}
+form,table{
+  width: 100vw;
+  height: 58vh;
+  text-align: center;
+}
+input{
+  width: 10vw;
+  height: 3vh;
+}
+button{
+  width: 10vw;
+  height: 3vh;
+}
+label{
+  font-size: larger;
+  gap: 20px;
+}
+h1{
+  height: 7vh;
+}
+th{
+  font-size: larger;
+}
+tr{
+  border: 2px solid black;
+}
+table{
+  border: solid 2px black;
+}
+
+
