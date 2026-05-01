@@ -26,7 +26,8 @@ function calcClass($IMC){
 }
 
 function calcJuros($Capital, $taxa, $tempo){
-    $Montante = $Capital * ((1 + $taxa) ** $tempo);
-    return $Montante;
+    $taxaDecimal= $taxa/100;
+    $Montante = $Capital * ((1 + $taxaDecimal) ** $tempo);
+    return number_format($Montante,2);
 }
 ?>
