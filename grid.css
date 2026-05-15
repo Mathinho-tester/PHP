@@ -14,7 +14,7 @@ body{
   /*grid-template-rows: repeat(3, 1fr);*/
   grid-template-areas:
     "header header header header"
-    "form form form form"
+    "aside1 main main aside2"
     "footer footer footer footer";
   gap: 1px;
 }
@@ -23,12 +23,16 @@ header {
   grid-area: header;
 }
 
+
 footer {
   grid-area: footer;
 }
 
 form{
   grid-area: form;
+}
+main{
+  grid-area: main;
 }
 
 header,
@@ -43,11 +47,16 @@ footer {
   height: 20vh;
   text-align: center;
 }
-form,table{
+form{
   width: 100vw;
   height: 58vh;
   text-align: center;
 }
+main{
+  height: 60vh;
+  width: 60vw;
+}
+
 input{
   width: 10vw;
   height: 3vh;
