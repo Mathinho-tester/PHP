@@ -30,4 +30,19 @@ function calcJuros($Capital, $taxa, $tempo){
     $Montante = $Capital * ((1 + $taxaDecimal) ** $tempo);
     return number_format($Montante,2);
 }
+function conecta($paramString = ""){
+    if($paramString == ""){
+        // BANCO DE DADOS: Garantido como 'cursos'
+        $paramString = "pgsql:host=localhost;port=5432;dbname=cursos;user=postgres;password=postgres";
+    }
+    try{
+        $c = new PDO($paramString);
+        $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch(PDOException $e){
+        echo "<p style='color:red;'>Erro ao conectar: " . $e->getMessage() . "</p>";
+        exit;
+    }
+    return $c;
+}
 ?>

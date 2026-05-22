@@ -12,10 +12,13 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 3; 
+    grid-template-columns: 6; 
     grid-template-areas:
         "header header header"
         "aside1 main aside2"
+        "aside1 main aside2"
+        "aside1 main aside2"
+        "form form form"
         "footer footer footer";
     gap: 0px;
     width: 100vw;
@@ -42,7 +45,7 @@ main {
     grid-area: main;
     background-color: rgb(155, 234, 240);
     color: rgb(20, 19, 19); 
-    height: 60vh;
+    height: 80vh;
     width: 60vw;
     gap: 0px;
     display: flex;
@@ -52,7 +55,11 @@ main {
     justify-content: center;
     gap: 1px;
 }
-
+form{
+    grid-area: form;
+    width: 100vw;
+    height: 30vh;
+}
 .aside2 {
     grid-area: aside2;
     background-color: aquamarine;
@@ -79,6 +86,7 @@ tr{
     height: 10vh;
 }
 th{
+    height: 2vh;
     border: 2px solid black;
 }
 td{
