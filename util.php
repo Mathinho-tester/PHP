@@ -45,4 +45,20 @@ function conecta($paramString = ""){
     }
     return $c;
 }
+function salvaUpload($paramConn, $paramFiles, $paramCampo){
+     if ( isset( $paramFiles[$paramCampo] ) ) {
+            $novoId   = $paramConn->lastInsertId();
+            $ext = pathinfo($paramFiles[$paramCampo]['name'],
+                   PATHINFO_EXTENSION);
+            $arquivoNovo = "imagens/$novoId.$ext";
+            try {
+               if (move_uploaded_file($paramFiles[$paramCampo]['tmp_name'], 
+                   $arquivoNovo)) {
+                   echo "<br>Arquivo $arquivoNovo criado com sucesso.\n";
+               } 
+            } catch (PDOException $e) {
+               echo "Erro, verifique o arquivo se a pasta imagens existe";
+            }     
+        }
+}
 ?>

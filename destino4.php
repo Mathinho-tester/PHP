@@ -41,7 +41,6 @@ if (isset($_POST['valor'])) {
           </table>";
           
 } else {
-    // Caso alguém tente acessar o destino4.php diretamente
     echo "<p>Por favor, utilize o formulário para filtrar os cursos.</p>";
 }
 ?>
